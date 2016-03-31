@@ -15,4 +15,4 @@ jsonwebtoken<br/>
 see config.js to mongodb configuration
 <br/>
 <br/>
-Client use webstorage: <a href="http://www.w3schools.com/html/html5_webstorage.asp">http://www.w3schools.com/html/html5_webstorage.asp</a>
+Client uses webstorage: <a href="http://www.w3schools.com/html/html5_webstorage.asp">http://www.w3schools.com/html/html5_webstorage.asp</a>

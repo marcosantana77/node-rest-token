@@ -1,5 +1,5 @@
 # node-rest-token
-Autorization rest token client-server
+Autorisation rest token client-server
 <br/><br/>
 Node<br/>
 Express<br/>

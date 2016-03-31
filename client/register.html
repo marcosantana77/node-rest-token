@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Node Rest Token</title>
+    <script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1 >Register</h1>
+    <label>Email</label>
+    <input type="email" placeholder="example@example.com" id="email">
+    <label>Password</label>
+    <input type="password" placeholder="Password" id="password">
+    <input type='button' value='Register' id="register" />
+    <br/>
+    <div id="content"></div>
+    <br/>
+    <a href="login.html">Click here to login</a>
+    <script type="text/javascript">    
+       $( document ).ready(function() {
+          $("#register").click(function () { 
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            var url = "http://localhost:3000/users/signin";
+            var data = {
+              email: email, 
+              password: password,
+            };
+            
+            $.post( url, data, function( result ) {
+                if(result.type == true){
+                  localStorage.setItem("token", result.data.token);
+                  window.location.href = "index.html";
+                }else{
+                  $("#content").html(result.data);
+                }
+              });
+          } );
+      });
+    </script>
+  </body>
+</html>

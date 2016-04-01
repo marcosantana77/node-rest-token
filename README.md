@@ -5,6 +5,7 @@ Node
 Express
 Mongoose
 jsonwebtoken
+angular
 
 1 - git clone https://github.com/renanbet/node-rest-token.git
 2 - cd server

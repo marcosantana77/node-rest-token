@@ -1,34 +1,22 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Node Rest Token</title>
-		<script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>  	
-	</head>
-	<body>     
-		<h1>Index</h1>
-		<div id="content"></div>
+     <head>
+      <title>Client Rest Token</title>
+      <script src="node_modules/angular/angular.min.js"></script>
+    </head>
+    <body ng-app="resttokenclient"> 
+		<div class="main" ng-controller="MainController">
+	      	<div class="container">  
+				<h1>{{title}}</h1>
+				<div>{{content}}</div>
+			</div>
+			<a href="logout.html">logout</a>
+		</div>
 		
-		<script type="text/javascript">
-		 $( document ).ready(function() {
-			var url = "http://localhost:3000/users/me";
-			var token = localStorage.getItem("token");
-			var data = {
-				token:token
-			};
-			$.ajax({
-			    type: 'POST',
-			    url: url,
-			    data:data,
-			    headers: {
-			        "Authorization":"Bearer "+token
-			    }
-			}).error(function(err){
-				$("#content").html("Forbidden" + " <br/><a href=\"login.html\">Login</a> ");
-			}
-			).done(function(result) {
-			   $("#content").html("Hello " + result.data.email + " <br/><a href=\"logout.html\">Logout</a> ");
-			});
-		 });
-		</script>
+	    <!-- Modules -->
+	    <script src="js/app.js"></script>
+
+	    <!-- Controllers -->
+	    <script src="js/controllers/MainController.js"></script>
     </body>
 </html>

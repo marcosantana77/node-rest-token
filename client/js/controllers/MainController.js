@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope','$http', function($scope,$http) { 
+app.controller('MainController', ['$scope','$http','$window', function($scope,$http,$window) { 
 
 	$scope.title = 'Client Rest Token'; 
 
@@ -13,10 +13,15 @@ app.controller('MainController', ['$scope','$http', function($scope,$http) {
 	  	token : token
 	  }
 	}).then(function successCallback(response) {
-	    $scope.content = 'Olá ' + response.data.data.email;
+	    $scope.content = 'Hello ' + response.data.data.email;
 	  	}, 
 	  	function errorCallback(response) {
 		   $scope.content = 'forbidden'; 
   	});
 
+  	$scope.logout = function()
+  	{
+  		localStorage.removeItem("token");
+  		$window.location.href = "./";
+  	};
 }]);

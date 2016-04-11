@@ -1,22 +1,19 @@
 <!doctype html>
-<html>
-     <head>
-      <title>Client Rest Token</title>
-      <script src="node_modules/angular/angular.min.js"></script>
-    </head>
-    <body ng-app="resttokenclient"> 
-		<div class="main" ng-controller="MainController">
-	      	<div class="container">  
-				<h1>{{title}}</h1>
-				<div>{{content}}</div>
-			</div>
-			<a href="logout.html">logout</a>
-		</div>
-		
-	    <!-- Modules -->
-	    <script src="js/app.js"></script>
-
-	    <!-- Controllers -->
-	    <script src="js/controllers/MainController.js"></script>
-    </body>
+<html ng-app="resttokenclient">
+  <head>
+    <title>Client Rest Token</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+  </head>
+  <body> 
+    <div id="main">
+      <div ng-view></div>
+    </div>		
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+    <!-- Controllers -->
+  	<script src="js/controllers/MainController.js"></script>
+  	<script src="js/controllers/LoginController.js"></script>
+  	<script src="js/controllers/RegisterController.js"></script>
+  </body>
 </html>

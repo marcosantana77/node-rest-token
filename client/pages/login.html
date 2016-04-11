@@ -1,0 +1,11 @@
+<div class="main" ng-controller="LoginController">
+  <div class="container">  
+    <h1>{{ title }}</h1>
+    <h2>{{ page }}</h2>
+    <label>Email</label><input type="text" ng-model="user.email" placeholder="Email">
+    <label>Password</label><input type="password" ng-model="user.password" placeholder="Password">
+    <button type="button" ng-click="login()">Login</button><br/>
+    <div>{{content}}</div>
+  </div>
+</div>
+<a ng-href="./#/register">Create an account </a>

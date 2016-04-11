@@ -4,7 +4,8 @@
   "description": "client rest token",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.5.3"
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
   },
   "devDependencies": {},
   "scripts": {

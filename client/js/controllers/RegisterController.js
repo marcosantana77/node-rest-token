@@ -16,7 +16,7 @@ app.controller('RegisterController', ['$scope','$http','$window', function($scop
 		}).then(function successCallback(response) {			
 			if(response.data.type==true){
 				localStorage.setItem("token", response.data.token);
-				$window.location.href = "index.html";
+				$window.location.href = "./";
 			}else{
 			    $scope.content = response.data.data;
 			}

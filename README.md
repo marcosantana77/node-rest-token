@@ -13,7 +13,7 @@ angular</br>
 4 - cd server<br/>
 5 - npm install<br/>
 6 - npm start<br/>
-7 - Open client/index.html on browser<br/>
+7 - Open client/ on browser<br/>
 <br/>
 see config.js to mongodb configuration
 <br/>
